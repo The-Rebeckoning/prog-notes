@@ -1,4 +1,4 @@
-# Unix Commands
+#Unix Commands
 
 	Ctrl+D = end of file 
 	Ctrl+Z = suspend 
@@ -50,7 +50,13 @@ to save the file
 	:wq
 
 
-## 
+## VisualStudioCode
+
+lets you open file from the terminal
+	code filename
+
+
+ 
 
 #MySQL
 
