@@ -58,7 +58,12 @@ lets you open file from the terminal
 
  
 
-#MySQL
+#virtual environments
+
+
+Add the virtualenv as a jupyter kernel
+	(your-venv)$ ipython kernel install --name "local-venv" --user
+
 
 
 
