@@ -11,7 +11,7 @@ Function returns a value that’s determined by the conditions you specify
 		ELSE else_result_expression
 
 
-## Example
+## Examples
 
 	SELECT player_name, weight,
        		CASE WHEN weight > 250 THEN 'over 250'
@@ -20,6 +20,14 @@ Function returns a value that’s determined by the conditions you specify
             	ELSE '175 or under' END AS weight_group
   	FROM benn.college_football_players
 
+
+
+	SELECT Name,
+	CASE WHEN Occupation LIKE 'P%' THEN"(P)"
+    		WHEN Occupation LIKE 'D%' THEN "(D)"
+    		WHEN Occupation LIKE 'S%' THEN "(S)"
+    	ELSE "(A)" END AS occupation_search
+	FROM Occupations;
 
 
 # The SQL LIKE Operator
@@ -44,3 +52,20 @@ There are two wildcards often used in conjunction with the LIKE operator:
 	WHERE CustomerName LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
 	WHERE ContactName LIKE 'a%o'	Finds any values that start with "a" and ends with "o"
 
+
+
+
+# How to use the WITH ROLLUP operator 
+
+WITH ROLLUP operator in the GROUP BY clause to add summary rows to the final result set. The row summarizes the aggregate columns in the result set 
+
+
+SQL ROLLUP with partial rollup example
+You can use ROLLUP to perform a partial roll-up that reduces the number of subtotals calculated as shown in the following example:
+
+	SELECT 
+    		warehouse, product, SUM(quantity)
+	FROM
+    		inventory
+
+	GROUP BY warehouse, ROLLUP (product);
