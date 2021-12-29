@@ -1,7 +1,8 @@
-#Unix Commands
+#CLI
 
 	Ctrl+D = end of file 
 	Ctrl+Z = suspend 
+
 
 
 ## Remove items
@@ -18,6 +19,16 @@ To remove a nonempty directory, add the -r (recursive) option:
 To remove a file:
 	
 	rm filename
+
+
+## cat
+cat is a  utility that reads files sequentially, writing them to standard output. The name is derived from its function to concatenate files.
+
+	cat file2 >> file1
+	cat file1
+	file1 contents
+	file2 contents
+
 
 
 
