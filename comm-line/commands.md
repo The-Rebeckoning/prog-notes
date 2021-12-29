@@ -3,7 +3,27 @@
 	Ctrl+D = end of file 
 	Ctrl+Z = suspend 
 
+
+## Remove items
+
+To remove a directory:
+
+	rm -d dirname
+	rmdir dirname
+
+To remove a nonempty directory, add the -r (recursive) option:
+
+	rm -r dirname
+
+To remove a file:
+	
+	rm filename
+
+
+
+
 # Git commands
+
 
 Create new depository locally 
 
