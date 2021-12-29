@@ -69,3 +69,15 @@ You can use ROLLUP to perform a partial roll-up that reduces the number of subto
     		inventory
 
 	GROUP BY warehouse, ROLLUP (product);
+##ROUND
+
+Returns the number rounded to the precision specified by length. If length is 0 the decimal digits are omitted.
+
+  ROUND (number[,length]
+
+# Different types of Joins:
+- (Inner) Join
+- Left (Outer) Join
+- Full (Outer) Join
+
+
