@@ -30,6 +30,14 @@ Function returns a value that’s determined by the conditions you specify
 	FROM Occupations;
 
 
+# concat ()
+
+The CONCAT() function adds two or more strings together.
+
+	SELECT CONCAT('SQL', ' is', ' fun!');
+	
+	SQL is fun!
+
 # The SQL LIKE Operator
 The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
 
