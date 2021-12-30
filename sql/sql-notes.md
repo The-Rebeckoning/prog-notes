@@ -53,6 +53,19 @@ There are two wildcards often used in conjunction with the LIKE operator:
 	WHERE ContactName LIKE 'a%o'	Finds any values that start with "a" and ends with "o"
 
 
+# How to code the GROUP BY and HAVING clauses
+
+GROUP BY groups the rows of a result set based on one or more columns or expressions
+
+HAVING lets you specify a search condition for a group or an aggregate 
+
+	SELECT select_list
+	FROM table_source
+	WHERE search_condition
+	[GROUP BY group_by_list]
+	[HAVING search_condition]
+	[ORDER BY order_by_list]
+
 
 
 # How to use the WITH ROLLUP operator 
