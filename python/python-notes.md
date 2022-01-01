@@ -142,6 +142,20 @@ Lists are the Python equivalent of arrays in other languages. You use brackets t
 
         List=[]
 
+## List indices
+
+The index() method returns the index of the specified element in the list.
+
+	
+
+	animals = ['cat', 'dog', 'rabbit', 'horse']
+	# get the index of 'dog'
+	index = animals.index('dog')
+	print(index)
+	# Output: 1
+
+
+
 
 ## List Methods
 ### append()
@@ -181,6 +195,10 @@ List comprehension offers a shorter syntax when you want to create a new list ba
         vec2 = [4, 3, -9]
         print([x*y for x in vec1 for y in vec2])
         [8, 6, -18, 16, 12, -36, 24, 18, -54]
+
+
+## index()
+
 
 
 # Sets
