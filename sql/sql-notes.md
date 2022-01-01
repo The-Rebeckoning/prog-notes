@@ -1,3 +1,35 @@
+#Subqueries
+
+Subquery is a SELECT coded within another SQL statement. Can be introduced using WHERE, HAVING, FROM or SELECT
+
+## Syntax 
+
+	SELECT invoice_number, invoice_date, invoice_total
+	FROM invoices
+	WHERE invoice_total> 
+		(SELECT AVG(invoice_total) 
+		FROM invoices)
+	ORDER BY invoice_total
+
+## when to use subqueries
+
+Most subqueries can be restated as joins and most joins can be restated as subqueries
+
+### Advantages of joins:
+
+-SELECT clause of a join can include columns from both tables
+
+-A join tends to be more intuitive when it uses an existing relationship between the two tables, such as a primary key to a foreign key relationship
+
+### Advantages of subqueries
+
+- You can use a subquery to pas an aggregate value to the main query
+
+- A subquery tends to be more intuitive when it uses an ad hoc relationship between the two tables
+
+- Long, complex queries can sometimes be easier to code using subqueries
+
+
 # CASE functions
 
 Function returns a value that’s determined by the conditions you specify 
