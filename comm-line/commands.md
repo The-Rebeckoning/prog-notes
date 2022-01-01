@@ -4,6 +4,24 @@
 	Ctrl+Z = suspend 
 
 
+## Command-Line Options
+
+Unix tradition encourages the use of command-line switches to control programs, so that options can be specified from scripts. This is especially important for programs that function as pipes or filters. Three conventions for how to distinguish command-line options from ordinary arguments exist; the original Unix style, the GNU style, and the X toolkit style.
+
+In the original Unix tradition, command-line options are single letters preceded by a single hyphen. Mode-flag options that do not take following arguments can be ganged together; thus, if -a and -b are mode options, -ab or -ba is also correct and enables both. The argument to an option, if any, follows it (optionally separated by whitespace). In this style, lowercase options are preferred to uppercase. When you use uppercase options, it's good form for them to be special variants of the lowercase option.
+
+
+-f:
+File (with argument). Very often used with an argument to specify an input (or, less frequently, output) file for programs that need to randomly access their input or output (so that redirection via < or > won't suffice). 
+
+-r:
+
+Recurse (without argument). If the program operates on a directory, then this option might tell it to recurse on all subdirectories. Any other use in a utility that operated on directories would be quite surprising. The classic example is, of course, cp(1).
+
+ 
+
+
+
 
 ## Remove items
 
@@ -12,9 +30,9 @@ To remove a directory:
 	rm -d dirname
 	rmdir dirname
 
-To remove a nonempty directory, add the -r (recursive) option:
+To remove a nonempty directory, add the -r (recursive) option and the file option -f:
 
-	rm -r dirname
+	rm -rf dirname
 
 To remove a file:
 	
