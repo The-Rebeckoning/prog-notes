@@ -11,11 +11,8 @@ Modify data in one or more rows of a table. Can modify a specific row or multipl
 # Subqueries
 
 Subquery is a SELECT coded within another SQL statement. Can be introduced using WHERE, HAVING, FROM or SELECT 
-### Syntax 
 
-
-
-
+ 
 ## Subqueries
 
 	SELECT invoice_number, invoice_date, invoice_total
@@ -25,7 +22,7 @@ Subquery is a SELECT coded within another SQL statement. Can be introduced using
 		FROM invoices)
 	ORDER BY invoice_total
 
-### when to use subqueries
+### when to use subqueries v
 
 Most subqueries can be restated as joins and most joins can be restated as subqueries
 
@@ -48,8 +45,7 @@ Most subqueries can be restated as joins and most joins can be restated as subqu
 
 Function returns a value that’s determined by the conditions you specify 
 
-*syntax*
-
+## Syntax
 	
 	CASE input_expression
 		WHEN when_expression_1 THEN result_expression_1
@@ -97,7 +93,7 @@ There are two wildcards often used in conjunction with the LIKE operator:
 	FROM table_name
 	WHERE columnN LIKE pattern;
 
-# LIKE Operator			Description
+# LIKE Operator						Description
 	WHERE CustomerName LIKE 'a%'	Finds any values that start with "a"
 	WHERE CustomerName LIKE '%a'	Finds any values that end with "a"
 	WHERE CustomerName LIKE '%or%'	Finds any values that have "or" in any position
@@ -164,8 +160,73 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 
 ### Example
 
-sdfssdfds
+The following SQL statement selects all orders with customer information:
+
+	SELECT Orders.OrderID, Customers.CustomerName
+	FROM Orders
+	INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+
+Note: The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns. If there are records in the "Orders" table that do not have matches in "Customers", these orders will not be shown!
+
+## Left Join
+
+The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.
+
+### Syntax
+
+	SELECT column_name(s)
+	FROM table1
+	LEFT JOIN table2
+	ON table1.column_name = table2.column_name;
+
+### Example
+
+	SELECT Customers.CustomerName, Orders.OrderID
+	FROM Customers
+	LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+	ORDER BY Customers.CustomerName;
+
+The LEFT JOIN keyword returns all records from the left table (Customers), even if there are no matches in the right table (Orders).
+
+## Right Join
+
+The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1). The result is 0 records from the left side, if there is no match
+
+### Syntax
+
+	SELECT column_name(s)
+	FROM table1
+	RIGHT JOIN table2
+	ON table1.column_name = table2.column_namel
+
+### Example
+
+The following SQL statement will return all employees, and any orders they might have placed:
+
+	SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+	FROM Orders
+	RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+	ORDER BY Orders.OrderID;
+
+The RIGHT JOIN keyword returns all records from the right table (Employees), even if there are no matches in the left table (Orders).
+
+## Self Join
+
+A self join is a regular join, but the table is joined with itself.
+
+### Syntax
+
+	SELECT column_name(s)
+	FROM table1 T1, table1 T2
+	WHERE condition;
+
+### Example
+
+The following SQL statement matches customers that are from the same city:
 
 
-#### When to use
-
+	SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+	FROM Customers A, Customers B
+	WHERE A.CustomerID <> B.CustomerID
+	AND A.City = B.City
+	ORDER BY A.City;
