@@ -1,8 +1,22 @@
-#Subqueries
+# UPDATE
 
-Subquery is a SELECT coded within another SQL statement. Can be introduced using WHERE, HAVING, FROM or SELECT
+Modify data in one or more rows of a table. Can modify a specific row or multiple rows
 
-## Syntax 
+	UPDATE table_name
+	SET column_name1=expression_1
+	WHERE search_condition
+	UPDATE inhabitant SET name = 'Reb' WHERE personid = 20
+
+
+# Subqueries
+
+Subquery is a SELECT coded within another SQL statement. Can be introduced using WHERE, HAVING, FROM or SELECT 
+### Syntax 
+
+
+
+
+
 
 	SELECT invoice_number, invoice_date, invoice_total
 	FROM invoices
@@ -11,7 +25,7 @@ Subquery is a SELECT coded within another SQL statement. Can be introduced using
 		FROM invoices)
 	ORDER BY invoice_total
 
-## when to use subqueries
+### when to use subqueries
 
 Most subqueries can be restated as joins and most joins can be restated as subqueries
 
@@ -129,8 +143,32 @@ Returns the number rounded to the precision specified by length. If length is 0 
   ROUND (number[,length]
 
 # Different types of Joins:
+
+A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
 - (Inner) Join
 - Left (Outer) Join
 - Full (Outer) Join
+- Self Join
+
+![Different types of joins](/images/join.png)
+
+## Inner Join
+
+### Syntax
+
+	SELECT column_name(s)
+	FROM table1
+	INNER JOIN table2
+	ON table1.column_name = table2.column_name;	
+
+### Example
+
+
+
+#### When to use
+
+
+
 
 
