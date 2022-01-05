@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # UPDATE
 
 Modify data in one or more rows of a table. Can modify a specific row or multiple rows
@@ -16,11 +15,8 @@ Subquery is a SELECT coded within another SQL statement. Can be introduced using
 
 
 
-=======
+
 ## Subqueries
->>>>>>> d476fb9a9e660d632a9ffd1a6cbc73486d4d6a1c
-
-
 
 	SELECT invoice_number, invoice_date, invoice_total
 	FROM invoices
@@ -155,7 +151,7 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 - Full (Outer) Join
 - Self Join
 
-![Different types of joins](/images/join.png)
+![Different types of joins](https://cdn.educba.com/academy/wp-content/uploads/2019/10/Types-of-Joins-in-SQl.png)
 
 ## Inner Join
 
@@ -168,11 +164,8 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 
 ### Example
 
+sdfssdfds
 
 
 #### When to use
-
-
-
-
 
