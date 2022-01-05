@@ -151,7 +151,7 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 - Full (Outer) Join
 - Self Join
 
-![Different types of joins](/images/join.png)
+![Different types of joins](sql/images/joins.png)
 
 ## Inner Join
 
