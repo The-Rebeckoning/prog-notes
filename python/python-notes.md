@@ -139,18 +139,7 @@ List comprehension offers a shorter syntax when you want to create a new list ba
 
 
 
-# Sets
 
-An unordered collection of objects used when membership and uniqueness are main things you need to know.
-
-Are immutable and hashable: ints, floats and strings can be members of a set but lists and dictionaries can't be.
-
-## Find unique members of a list using sets 
-
-        numbers = [1, 2, 2, 3, 3, 4, 5]
-        unique_numbers = list(set(numbers))
-        print(unique_numbers)
-        # Result: [1, 2, 3, 4, 5]
 
 
 # sep and end
