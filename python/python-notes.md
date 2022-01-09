@@ -1,62 +1,7 @@
-#Scop
-
-e
-##Local Scope
-Variables or methods that have local scope (and for object-oriented programming, this includes instances of classes) are accessible only in the current block of code. There is a sort of "nested sets" model to the notion of scope. Beginning with global objects (see below), each contained block may access objects defined in a containing block; that is to say, in a code fragment in which a variable is defined and the program enters some kind of loop block, that loop sub-block does have access to that variable defined outside of the block, and it may, additionally, override it temporarily by declaring a variable of the same name in its own local scope (the scope of that loop block). See the example below. Local scope essentially refers to variables that are limited, as far as access is concerned, to the most current block of code, and not necessarily to any "outer" blocks that might also be counted in the nested model.
-
-## Global Scope
-Certain variables and methods can be said to have global scope. This term encompasses a very qualified situation: all of the variables defined at the very beginning of a program are available to the entire program. Likewise, in a function, the variables declared at the beginning are available to all the remaining code in that function
 
 
-# Methods for numeric data types
-## abs()
-The Python abs() method returns the absolute value of a number. The absolute value of a number is the number's distance from 0. This makes any negative number positive, while positive numbers are unaffected. For example, abs(-9) would return 9, while abs(2) would return 2.
-
-        abs(-4444)
-        4444
 
 
-# Integers
-
-# Floats
-
-# Complex numbers
-
-# Boolean
-
-
-# Strings 
-Strings processing works very well in python. 
-
-They can be delimited by a single (' '), double (" "), triple single (''' ''') or triple double (""" """).
-
-They can also contain a tab (\t) or newline (\n) character.
-
-        test_string = "Rebecca"
-        test_string
-        'Rebecca'
-       
-## Indexing
-
-By referencing index numbers, we can isolate one of the characters in a string. We do this by putting the index numbers in square brackets. 
-
-        ss = "Sammy Shark!"
-        print(ss[4])
- 
-        Output
-        y
-
-### index()
-
-The index() method returns the index of a substring inside the string (if found). 
-
-        text = 'Python is fun'
-
-        # find the index of is
-        result = text.index('is')
-        print(result)
-        # Output: 7
-    
 ### str.isalnum()
 This method checks if all the characters of a string are alphanumeric (a-z, A-Z and 0-9).
 
@@ -74,7 +19,7 @@ This method checks if all the characters of a string are alphabetical (a-z and A
         print 'abcd1'.isalpha()
         False
 
-### str.isdigit()
+<!-- ### str.isdigit() -->
 This method checks if all the characters of a string are digits (0-9).
 
         print '1234'.isdigit()
@@ -146,23 +91,6 @@ The capitalize() method returns a copy of the original string and converts the f
 ###strip()
 
 strip() returns a new string after removing any leading and trailing whitespaces including tabs (\t).
-# Lists
-
-Lists are the Python equivalent of arrays in other languages. You use brackets to create a list. They can be sliced, diced, appended, etc. compared to tuples. They are created by using brackets.
-
-        List=[]
-
-## List indices
-
-The index() method returns the index of the specified element in the list.
-
-	
-
-	animals = ['cat', 'dog', 'rabbit', 'horse']
-	# get the index of 'dog'
-	index = animals.index('dog')
-	print(index)
-	# Output: 1
 
 
 

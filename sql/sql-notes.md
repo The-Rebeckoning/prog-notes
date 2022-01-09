@@ -109,6 +109,8 @@ GROUP BY groups the rows of a result set based on one or more columns or express
 
 HAVING lets you specify a search condition for a group or an aggregate 
 
+## syntax
+
 	SELECT select_list
 	FROM table_source
 	WHERE search_condition
@@ -116,7 +118,14 @@ HAVING lets you specify a search condition for a group or an aggregate
 	[HAVING search_condition]
 	[ORDER BY order_by_list]
 
+## example
 
+Let’s find the number of classes with more than five students.
+
+	SELECT class
+	FROM Courses
+	GROUP BY class
+	HAVING COUNT(student) >4
 
 # How to use the WITH ROLLUP operator 
 
