@@ -5,7 +5,156 @@ Modify data in one or more rows of a table. Can modify a specific row or multipl
 	UPDATE table_name
 	SET column_name1=expression_1
 	WHERE search_condition
-	UPDATE inhabitant SET name = 'Reb' WHERE personid = 20
+	UPDATE inhabitan
+	t SET name = 'Reb' WHERE personid = 20
+
+
+# Aggregate functions
+
+An aggregate function performs a calculation on a set of values, and returns a single value. Except for COUNT(*), aggregate functions ignore null values. Aggregate functions are often used with the GROUP BY clause of the SELECT statement.
+
+## AVG
+
+The AVG() function returns the average value of a numeric column. 
+
+The following SQL statement finds the average price of all products:
+
+	SELECT AVG(Price)
+	FROM Products;
+
+### How to Filter Records with Aggregate Function AVG
+
+You want to find groups of rows in which the average of values in a column is higher or lower than a given value.
+
+	SELECT name, AVG(price)
+	FROM product
+	GROUP BY name
+	HAVING AVG(price)>3.00;
+
+## MAX
+
+Our database has a table named student with data in the following columns: id, first_name, last_name, and grade.
+
+	id	first_name	last_name	grade
+	1	Lisa		Jackson		3
+	2	Gary		Larry		5
+	3	Tom			Michelin	2
+	4	Martin		Barker		2
+	5	Ellie		Black		5
+	6	Mary		Simpson		4
+
+Let’s find the students who have the highest grades.
+
+
+	SELECT  id, first_name, last_name, grade
+	FROM student
+	WHERE grade = (SELECT MAX(grade) FROM student);
+
+
+## MIN
+
+You want to find rows that store the smallest numeric value in a column.
+
+Our database has a table named weather with data in the following columns: id, city, and temperature.
+
+	id	city		temperature
+	1	Houston		23
+	2	Atlanta		20
+	3	Boston		15
+	4	Cleveland	15
+	5	Dallas		34
+	6	Austin		28
+
+Here’s how to find cities with the lowest temperature.
+
+
+	SELECT  id, city, temperature
+	FROM weather
+	WHERE temperature = (SELECT MIN(temperature) FROM weather);
+
+## SUM
+
+The SUM() function returns the total sum of a numeric column. 
+
+The following SQL statement finds the sum of the "Quantity" fields in the "OrderDetails" table:
+
+	SELECT SUM(Quantity)
+	FROM OrderDetails;
+
+### How to Filter Records with Aggregate Function SUM
+
+You need to find rows in which groups have a sum of values in one column less than a given value.
+
+Let’s find the names of departments that have sums of salaries of its employees less than 7000.
+
+Our database has a table named company with data in the following columns: id, department, first_name, last_name, and salary.
+
+	id	department	first_name	last_name	salary
+	1	marketing	Lora		Brown		2300
+	2	finance		John		Jackson		3200
+	3	marketing	Michael		Thomson		1270
+	4	production	Tony		Miller		6500
+	5	production	Sally		Green		2500
+	6	finance		Olivier		Black		3450
+	7	production	Jeniffer	Michelin	2800
+	8	marketing	Jeremy		Lorson		3600
+	9	marketing	Louis		Smith		4200
+
+Let’s find the names of departments that have sums of salaries of its employees less than 7000.
+
+
+	SELECT department, SUM(salary)
+	FROM company
+	GROUP BY department
+	HAVING SUM(salary)<7000;
+
+
+## COUNT
+
+The COUNT() function returns the number of rows that matches a specified criterion.
+
+The following SQL statement finds the number of products:
+
+	SELECT COUNT(ProductID)
+	FROM Products;
+
+### How to Filter Records with Aggregate Function COUNT
+
+You want to find groups of rows with a specific number of entries in a group.
+
+Our database has a table named product with data in the following columns: id, name and category.
+
+	id	name		category
+	1	sofa		furniture
+	2	gloves		clothing
+	3	T-Shirt		clothing
+	4	chair		furniture
+	5	desk		furniture
+	6	watch		electronics
+	7	armchair	furniture
+	8	skirt		clothing
+	9	radio 		electronics
+
+Let’s find the category of products with more than two entries.
+
+	SELECT category, COUNT(id)
+	FROM product
+	GROUP BY category
+	HAVING COUNT(id)>2;
+
+# The SQL SELECT DISTINCT Statement
+
+The SELECT DISTINCT statement is used to return only distinct (different) values.
+
+Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
+
+The following SQL statement selects all (including the duplicates) values from the "Country" column in the "Customers" table:
+
+	SELECT Country FROM Customers;
+
+The following SQL statement lists the number of different (distinct) customer countries:
+
+	SELECT COUNT(DISTINCT Country) FROM Customers;
 
 
 # Subqueries
@@ -22,7 +171,7 @@ Subquery is a SELECT coded within another SQL statement. Can be introduced using
 		FROM invoices)
 	ORDER BY invoice_total
 
-### when to use subqueries v
+### When to use subqueries 
 
 Most subqueries can be restated as joins and most joins can be restated as subqueries
 
@@ -141,7 +290,8 @@ You can use ROLLUP to perform a partial roll-up that reduces the number of subto
     		inventory
 
 	GROUP BY warehouse, ROLLUP (product);
-##ROUND
+
+## ROUND
 
 Returns the number rounded to the precision specified by length. If length is 0 the decimal digits are omitted.
 
@@ -239,3 +389,4 @@ The following SQL statement matches customers that are from the same city:
 	WHERE A.CustomerID <> B.CustomerID
 	AND A.City = B.City
 	ORDER BY A.City;
+
