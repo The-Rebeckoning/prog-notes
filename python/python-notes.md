@@ -94,15 +94,6 @@ strip() returns a new string after removing any leading and trailing whitespaces
 
 
 
-
-## List Methods
-### append()
-
-        cards=["Empress", "Hierophant"]
-        cards.append("The Fool")
-        print (cards)
-        ['Empress', 'Hierophant', 'The Fool']
-
 ## List Comprehension
 
 List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
@@ -135,12 +126,6 @@ List comprehension offers a shorter syntax when you want to create a new list ba
         [8, 6, -18, 16, 12, -36, 24, 18, -54]
 
 
-## index()
-
-
-
-
-
 
 # sep and end
 
@@ -159,5 +144,4 @@ end prints once all the values in the given print statement is printed
         
         
 
-# Methods
-## isinstance()
+
