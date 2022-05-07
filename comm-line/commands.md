@@ -113,6 +113,15 @@ Add the virtualenv as a jupyter kernel
 	(your-venv)$ ipython kernel install --name "local-venv" --user
 
 
+Remove a virtual enviornment:
+
+	sudo rm -rf venv
+
+If you have a list of packages in a requirements.txt file, type the following:
+
+	pip3 install -r requirements.txt
+
+	
 # MySQL
 
 mysql is a simple SQL shell with input line editing capabilities. It supports interactive and noninteractive use. When used interactively, query results are presented in an ASCII-table format. 
