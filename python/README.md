@@ -4,11 +4,11 @@ This subdirectory consists of Python notebooks. It includes pictures, code snipp
 
 ## Table of Contents
 
-1. [Python Notes]()
-2. [Object Oriented Programming]()
-3. [Matplotlib]()
-4. [Pandas]()
-5. [Numpy]()
+1. [Python Notes](https://github.com/The-Rebeckoning/prog-notesv2/blob/main/python/python-notes.ipynb)
+2. [Object Oriented Programming](https://github.com/The-Rebeckoning/prog-notesv2/blob/main/python/object-oriented-programming.ipynb)
+3. [Matplotlib](https://github.com/The-Rebeckoning/prog-notesv2/blob/main/python/matplotlib.ipynb)
+4. [Pandas](https://github.com/The-Rebeckoning/prog-notesv2/blob/main/python/pandas-final.ipynb)
+5. [Numpy](add here)
 
 
 ### Python Notes
