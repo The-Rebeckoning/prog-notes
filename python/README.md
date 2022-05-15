@@ -17,15 +17,15 @@ Central Jupyter Notebook with code snippets. Content covers basic data types, me
 
 ### Object Oriented Programming
 
-This notebook focuses specifically on principles behind to Object Oriented Programming (OOP) and how to use OOP to write programs in Python.
+This notebook focuses specifically on principles behind Object Oriented Programming (OOP) and how to use OOP to write programs in Python.
 
 ### Matplotlib
 
-A notebook that provides an introduction to the data visualization library matplotlib.
+A notebook that provides an introduction to the data visualization library Matplotlib.
 
 ### Pandas
 
-A notebook that provides an introduction to the beloved library pandas. 
+A notebook that provides an introduction to the beloved library Pandas. 
 
 
 ### Numpy
