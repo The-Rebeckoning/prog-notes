@@ -6,7 +6,7 @@ This repository consists of notebooks on Python, SQL, Statistics and the Command
 ## Table of Contents
 
 1. [Python](https://github.com/The-Rebeckoning/prog-notesv2/blob/main/python/python-notes.ipynb)
-2. [SQL](https://github.com/The-Rebeckoning/prog-notesv2/blob/main/python/object-oriented-programming.ipynb)
+2. [SQL](https://github.com/The-Rebeckoning/prog-notes/blob/main/sql/sql-notes.ipynb)
 3. [Statistics](https://github.com/The-Rebeckoning/prog-notesv2/tree/main/stats)
 4. [Command line](https://github.com/The-Rebeckoning/prog-notesv2/blob/main/comm-line/comm-line.ipynb)
 
