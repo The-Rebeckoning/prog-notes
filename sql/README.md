@@ -22,5 +22,5 @@ It includes:
 
 ### NoSQL Notes
 
-This NoSQL Notebook provides the basics of NoSQL. I used [M001 MongoDB Basics](https://university.mongodb.com/courses/M001/about) to create the notebook. It provides information on creating queries managing data using the document-oriented product. It also discusses how MongoDB uses JSOSN and BSON to store data and the advantages of using NoSQL instead of traditional RDBMS. 
+This NoSQL Notebook provides the basics of NoSQL. I used [M001 MongoDB Basics](https://university.mongodb.com/courses/M001/about) to create the notebook. It provides information on creating queries and managing data using the document-oriented product. It also discusses how MongoDB uses JSOSN and BSON to store data and the advantages of using NoSQL instead of traditional RDBMS. 
 
